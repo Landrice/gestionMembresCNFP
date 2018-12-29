@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" styleClass="gradient" stylesheets="@cssbtn.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionsmembrecnfp.NewUserController">
+   <children>
+      <AnchorPane fx:id="paneutil" layoutX="405.0" layoutY="67.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #90c7fb;">
+         <children>
+            <Text fill="#f2f0f0" layoutX="66.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau Utilisateur" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="code_util" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="71.0" prefHeight="25.0" prefWidth="224.0" promptText="Code(Numero) Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nom_util" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="116.0" prefHeight="28.0" prefWidth="224.0" promptText="Nom Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="prenom_util" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="155.0" prefHeight="28.0" prefWidth="224.0" promptText="Prenom Utilisateur" unFocusColor="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="id_utilis" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="200.0" prefHeight="28.0" prefWidth="224.0" promptText="Identifiant Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btncreer" buttonType="RAISED" layoutX="124.0" layoutY="347.0" onAction="#act_btncreer" prefWidth="102.0" style="-fx-background-color: #007ff6;" text="Creer" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" />
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="newpass" labelFloat="true" layoutX="49.0" layoutY="244.0" prefHeight="25.0" prefWidth="224.0" promptText="Nouveau mot de passe" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXComboBox fx:id="typeUtil" layoutX="171.0" layoutY="296.0" onAction="#act_type_util" prefHeight="25.0" prefWidth="102.0" promptText="type utilisateur" />
+            <Label layoutX="49.0" layoutY="299.0" text="Type d'utilisateur :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="connecterbtn" buttonType="RAISED" layoutX="33.0" layoutY="402.0" onAction="#act_connecterbtn" style="-fx-background-color: #007ff6;" text="Se Connecter" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <MaterialIconView fill="WHITE" glyphName="DIRECTIONS_WALK" size="30.0" />
+         </graphic>
+      </JFXButton>
+      <Text layoutX="33.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat de la base de données: " />
+      <Text fx:id="bddetat" layoutX="182.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label fx:id="lbletat" layoutX="182.0" layoutY="375.0" text="Non connecté" textFill="RED" />
+      <ImageView fitHeight="150.0" fitWidth="307.0" layoutX="33.0" layoutY="100.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logoCNFP.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

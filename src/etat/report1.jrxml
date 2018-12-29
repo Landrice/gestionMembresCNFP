@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" columnCount="2" pageWidth="595" pageHeight="842" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21347e9c-1699-4d24-9c3a-72006e7edb54">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     `bdd_membres`.`membres` membres]]>
+	</queryString>
+	<field name="code_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="titre_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexe_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prenom_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departement_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cycle_anne_etude_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="adresse_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephone_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="etablissement_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="couriel_cli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="photo_cli" class="java.io.InputStream">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="code_cli">
+		<groupExpression><![CDATA[$F{code_cli}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="187" splitType="Stretch">
+			<textField>
+				<reportElement x="75" y="54" width="113" height="20" uuid="7cd6329a-8c21-47da-8a99-7d2412a5495f"/>
+				<textFieldExpression><![CDATA[$F{code_cli}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="1" width="1" height="186" uuid="d48ea0d0-dc25-4036-a65a-e7c5630f4ad3"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="171" width="276" height="15" uuid="b884fbf0-0648-4cfe-9dfc-128da08fd657"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tél: +261 32 03 070 14 - UNIVERSITE D'ANTSIRANANA - BP.0]]></text>
+			</staticText>
+			<image>
+				<reportElement x="188" y="54" width="75" height="80" uuid="954f1852-9b4f-4509-846f-1e23cca37236"/>
+				<imageExpression><![CDATA[$F{photo_cli}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="29" y="170" width="221" height="1" uuid="ca17c7a5-f614-44e5-af8d-f2dee982df33"/>
+			</line>
+			<line>
+				<reportElement x="0" y="186" width="276" height="1" uuid="6f66d7b8-bbda-42bd-9144-5e5bec6342df"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="94" width="65" height="20" uuid="eaccacb6-e0ca-4150-91f9-26eed69ca799"/>
+				<text><![CDATA[Prénom(s)  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="74" width="113" height="20" uuid="f3b51438-0f2a-428d-b066-9235d78801d7"/>
+				<textFieldExpression><![CDATA[$F{nom_cli}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="114" width="65" height="20" uuid="de650c64-d4ce-447a-8828-91afeb8cfd1e"/>
+				<text><![CDATA[Signature    :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="276" y="1" width="1" height="186" uuid="a0a9e843-e3a9-4df9-a6e7-db467575ddd1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="75" y="94" width="113" height="20" uuid="49217376-1d3d-4b1c-ba65-fe291681ecde"/>
+				<textFieldExpression><![CDATA[$F{prenom_cli}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="148" y="0" width="100" height="15" uuid="3c1a2d8a-fa87-485a-90e6-60e464a519b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTE D'ADHESION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="54" width="65" height="20" uuid="368fce1d-0250-49d4-96da-31c544637765"/>
+				<text><![CDATA[Code client : ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="39" width="253" height="1" uuid="cfda0bc0-c69d-4031-9d1b-c809506138c7"/>
+			</line>
+			<staticText>
+				<reportElement x="136" y="19" width="138" height="20" uuid="129e973e-6f53-468e-aa03-aae79c7db2a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[SERVICE INTERNET & DOCUMENTATION]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="138" height="39" uuid="651ca512-6ae1-488e-b4e0-f1447c924eb5"/>
+				<imageExpression><![CDATA["D:\\stageMemoire\\App_source\\GestionsMembreCNFP\\src\\Images\\lgCNFPSmall.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="1" y="-1" width="276" height="1" uuid="91e3ca0c-cffd-41b2-bd1a-f609938e6e4c"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="74" width="65" height="20" uuid="ff050f5a-2fa9-4ac3-8897-5e1e717fe310"/>
+				<text><![CDATA[Nom            :]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

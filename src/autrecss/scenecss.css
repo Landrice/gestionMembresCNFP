@@ -1,0 +1,33 @@
+
+/* 
+    Created on : 7 sept. 2017, 14:20:32
+    Author     : MultiMedia
+*/
+
+
+.root{
+   
+    /*couleur du jfoneix decorator*/
+    -darkSide:#194db6;
+}
+
+
+
+/*Decorator*/
+.jfx-decorator {
+    -fx-decorator-color:-darkSide;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+
+}
+.jfx-decorator .jfx-decorator-buttons-container{
+    -fx-background-color:-fx-decorator-color;
+}
+.jfx-decorator .resize-border{
+    -fx-border-color:-fx-decorator-color;
+    -fx-border-width: 0 0 0 0;
+}
+
+
+
+

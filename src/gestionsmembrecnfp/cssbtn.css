@@ -1,0 +1,118 @@
+
+/* 
+    Created on : 6 sept. 2017, 08:54:30
+    Author     : MultiMedia
+*/
+
+/*Quand le souris passe au dessus du bouton.*/
+.nav-button:hover{
+    -fx-background-color:#222D32;
+}
+
+.nav-button:focused .glyph-icon{
+    -fx-fill:  #bf3f3f; 
+}
+
+/*Couleur du fond du bouton*/
+.nav-button {
+    -fx-background-color:#2A3F54;
+    -fx-pref-height:1500;   
+    -fx-pref-width:205;
+    -fx-text-fill: #defbde;
+    -fx-cursor: hand;
+}
+
+/*Quand le bouton est pressé*/
+.nav-button:pressed {
+    -fx-background-color:#2A3F54;
+    -fx-border-color:#004080;
+    
+}
+
+/* graduation entre le bleu et le blanc */
+.gradient{
+    -fx-background-color: linear-gradient( from 50% 0% to 50% 100%,#194db6,#ffffff);
+}
+.t{
+   -fx-background-color: linear-gradient( from 50% 0% to 50% 100%, #2A3F54,#ffffff); 
+}
+
+/*table View*/
+.table-view{
+    -fx-table-cell-border-color: transparent;
+   -fx-effect: dropshadow( gaussian,rgba(0,0,0,0.16),5,0,0,2);
+    -fx-background-radius: 3px;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+
+}
+
+
+/* CSS de la tableVIEW des membres */
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;
+}
+.table-view .column-header:last-visible{
+    -fx-border-width: 0 0 1 0;
+}
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+}
+.table-view .column-header{
+    -fx-border-width: 0 1 1 0;
+    -fx-border-color: rgba(1,1,1,0.15);
+}
+.table-view .column-header .label{
+    -fx-font-size:12px;
+    -fx-padding:16 0 16 0;
+    -fx-alignment:CENTER-LEFT;
+    -fx-font-weight:400;
+}
+.table-view .table-row-cell .table-cell{
+    -fx-border-width: 0 0 0 0;
+}
+
+.table-view .table-row-cell:selected .table-cell{
+    -fx-border-width: 0 0 0 0;
+}
+.table-view :selected{
+    -fx-background-color: rgba(0,0,0,0.04);
+    -fx-background-insets:0;
+}
+.table-row-cell:selected{
+    -fx-background-color:#2A3F54;
+    -fx-background-insets:0;
+}
+
+/*button */
+
+.btn{
+    -fx-animated: true;
+    -fx-background-color: #2A3F54;
+    -fx-text-fill: #ffffff; 
+    -fx-font-size:14px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 50px;
+    -fx-background-radius:0px ;
+}
+
+.btn:hover .glyph-icon{
+    -fx-fill:#bf3f3f;
+}
+
+.btnmembres {
+    -fx-background-color:#2A3F54;
+    -fx-pref-height:210;   
+    -fx-pref-width:210;
+    -fx-text-fill: #defbde;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 10px;
+}
+.btnmembres:hover .glyph-icon{
+    -fx-fill:  #bf3f3f;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.btnmembres:hover {
+
+}

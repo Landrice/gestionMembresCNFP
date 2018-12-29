@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.NewUserHomeController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #90c7fb;">
+         <children>
+            <Text fill="#f2f0f0" layoutX="70.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau Utilisateur">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="code_util" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="71.0" prefHeight="25.0" prefWidth="224.0" promptText="Code(Numero) Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nom_util" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="109.0" prefHeight="28.0" prefWidth="224.0" promptText="Nom Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="prenom_util" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="158.0" prefHeight="28.0" prefWidth="224.0" promptText="Prenom Utilisateur" unFocusColor="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="id_utilis" focusColor="#007ff6" labelFloat="true" layoutX="49.0" layoutY="200.0" prefHeight="28.0" prefWidth="224.0" promptText="Identifiant Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btncreer" buttonType="RAISED" layoutX="141.0" layoutY="347.0" onAction="#act_btncreer" style="-fx-background-color: #007ff6;" text="Creer" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="newpass" layoutX="49.0" layoutY="246.0" prefHeight="25.0" prefWidth="224.0" promptText="Nouveau mot de passe" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXComboBox fx:id="typeUtil" layoutX="165.0" layoutY="295.0" prefHeight="25.0" prefWidth="108.0" promptText="type utilisateur" />
+            <Label layoutX="49.0" layoutY="298.0" text="Type d'utilisateur :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

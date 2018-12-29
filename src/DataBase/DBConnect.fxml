@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DataBase.DBConnectController">
+   <children>
+      <AnchorPane fx:id="panepr" prefHeight="427.0" prefWidth="736.0" styleClass="gradient" stylesheets="@../gestionsmembrecnfp/cssbtn.css">
+         <children>
+            <AnchorPane layoutX="400.0" layoutY="48.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #90c7fb;">
+               <children>
+                  <Text fill="WHITE" layoutX="45.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres du base de données" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+                  <GridPane layoutX="27.0" layoutY="73.0" prefHeight="295.0" prefWidth="291.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="97.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="194.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="localhostfield" text="localhost" GridPane.columnIndex="1" />
+                        <TextField fx:id="fieldport" promptText="3306" text="3306" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="bddnamefield" editable="false" promptText="bdd_membres" text="bdd_membres" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="utilfield" promptText="root" text="root" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="MSQL Host" />
+                        <Label text="MSQL Port" GridPane.rowIndex="1" />
+                        <Label text="Nom de la base" GridPane.rowIndex="2" />
+                        <Label text="MSQL Utilisateur" GridPane.rowIndex="3" />
+                        <Label text="Mot de passe" GridPane.rowIndex="4" />
+                        <JFXButton fx:id="cntbtn" buttonType="RAISED" onAction="#cntbtn_act" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #007ff6;" text="Sauvegarder" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="HDD_ALT" size="40.0" />
+                           </graphic>
+                        </JFXButton>
+                        <PasswordField fx:id="passfield" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="acueilbtn" buttonType="RAISED" layoutX="28.0" layoutY="398.0" onAction="#acueilbtn_act" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #007ff6;" text="Accueil" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="40.0" />
+               </graphic>
+            </JFXButton>
+            <Text layoutX="28.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="état du serveur: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="serversta" layoutX="128.0" layoutY="371.0" text="Non connecté" textFill="RED" />
+            <FontAwesomeIconView fill="#bf3f3f" glyphName="DATABASE" layoutX="80.0" layoutY="303.0" opacity="0.5" size="150.0" text="" />
+            <ImageView fitHeight="80.0" fitWidth="261.0" layoutX="51.0" layoutY="83.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/lgCNFPSmall.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fill="#bf3f3f" glyphName="GEAR" layoutX="209.0" layoutY="312.0" opacity="0.5" size="75.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

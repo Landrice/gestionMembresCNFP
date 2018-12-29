@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AjmembrController">
+   <children>
+      <AnchorPane prefHeight="605.0" prefWidth="800.0">
+         <children>
+            <Pane layoutY="14.0" prefHeight="33.0" prefWidth="800.0" style="-fx-background-color: #cc0000;">
+               <children>
+                  <Text fx:id="membreVar" fill="WHITE" layoutX="304.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau Membre">
+                     <font>
+                        <Font name="Comic Sans MS" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <GridPane hgap="30.0" layoutX="47.0" layoutY="67.0" prefHeight="500.0" prefWidth="523.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="25.0" minHeight="16.0" prefHeight="21.0" />
+                  <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXDatePicker fx:id="dateinsc" defaultColor="#2a3f54" overLay="true" prefHeight="25.0" prefWidth="252.0" promptText="Date d'inscription (Anné-mois-jour)" GridPane.rowIndex="1" />
+                  <JFXDatePicker fx:id="dateexp" defaultColor="#2a3f54" prefHeight="25.0" prefWidth="240.0" promptText="Date d'expiration" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="codecli" labelFloat="true" prefHeight="25.0" prefWidth="241.0" promptText="Code Client" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="nom" labelFloat="true" promptText="Nom" GridPane.rowIndex="3" />
+                  <JFXComboBox fx:id="titre" labelFloat="true" prefHeight="25.0" prefWidth="235.0" promptText="Titre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="prenom" labelFloat="true" promptText="Prenom" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.rowIndex="4">
+                     <children>
+                        <JFXRadioButton fx:id="masc" text="Masculin">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexe" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="fem" text="Feminin" toggleGroup="$sexe" />
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="depart" labelFloat="true" promptText="Département/Filière" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="cycle" labelFloat="true" promptText="Cycle/Anné d'étude" GridPane.rowIndex="5" />
+                  <JFXTextField fx:id="adress" labelFloat="true" promptText="Adresse" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <JFXTextField fx:id="tel" labelFloat="true" promptText="Télephone" GridPane.rowIndex="6" />
+                  <JFXTextField fx:id="etab" labelFloat="true" promptText="Etablissement" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <JFXTextField fx:id="mail" labelFloat="true" promptText="Courriel" GridPane.rowIndex="7" />
+                  <JFXTextField fx:id="jourrest" labelFloat="true" onDragEntered="#jourrestant" onKeyPressed="#jourrestant" onKeyTyped="#jourrestant" onMouseClicked="#jourrestant" onMouseEntered="#jourrestant" onMousePressed="#jourrestant" promptText="Nombre de jours restants" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'Inscription" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'Expiration" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="numrecu" labelFloat="true" promptText="Numero du reçu" GridPane.rowIndex="8" />
+                  <JFXTextField fx:id="montanrecu" labelFloat="true" promptText="Montatant du recu en lettres" text="cinquante Ariary" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+               </children>
+            </GridPane>
+            <VBox layoutX="607.0" layoutY="336.0" prefHeight="240.0" prefWidth="153.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="vider" buttonType="RAISED" contentDisplay="TOP" onAction="#vider_act" prefHeight="95.0" prefWidth="155.0" styleClass="btnmembres" stylesheets="@../gestionsmembrecnfp/cssbtn.css" text="Vider les champs">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE_ALT" size="30.0" />
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="ajoutbtn" buttonType="RAISED" contentDisplay="TOP" onAction="#ajoutbtn_act" prefHeight="111.0" prefWidth="156.0" styleClass="btnmembres" stylesheets="@../gestionsmembrecnfp/cssbtn.css" text="Ajouter">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="30.0" />
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="modifbtn" buttonType="RAISED" contentDisplay="TOP" onAction="#modifbtnact" prefHeight="104.0" prefWidth="153.0" styleClass="btnmembres" stylesheets="@../gestionsmembrecnfp/cssbtn.css" text="Modifier/Mettre à jour">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="STREET_VIEW" size="30.0" />
+                     </graphic></JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="580.0" layoutY="85.0" prefHeight="128.0" prefWidth="180.0">
+               <children>
+                  <ImageView fx:id="photo" fitHeight="194.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/customer.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="selectimg" buttonType="RAISED" onAction="#selectimg_act" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #5862ff;" text="Parcourir une image" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PHOTO" size="20.0" />
+                     </graphic></JFXButton>
+               </children>
+            </VBox>
+            <Label fx:id="labelpath" layoutX="47.0" layoutY="567.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

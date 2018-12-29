@@ -1,0 +1,6 @@
+#Wed Sep 13 14:30:42 CEST 2017
+user=root
+db=bdd_membres
+port=3306
+password=
+host=localhost

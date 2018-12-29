@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="panehomeconnecter" prefHeight="500.0" prefWidth="800.0" styleClass="gradient" stylesheets="@cssbtn.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionsmembrecnfp.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="402.0" layoutY="67.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #90c7fb;">
+         <children>
+            <Text fill="WHITE" layoutX="72.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se connecter" underline="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="identif_util" focusColor="#007ff6" labelFloat="true" layoutX="74.0" layoutY="128.0" promptText="Identifiant Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="identif_pass" focusColor="#007ff6" labelFloat="true" layoutX="74.0" layoutY="206.0" onAction="#act_btnvalider" promptText="Mot de passe Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnvalider" buttonType="RAISED" layoutX="93.0" layoutY="315.0" onAction="#act_btnvalider" ripplerFill="WHITE" style="-fx-background-color: #007ff6;" stylesheets="@../autrecss/btn.css" text="Valider" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="KEY" size="25.0" />
+               </graphic>
+            </JFXButton>
+            <JFXSpinner fx:id="validerProcess" layoutX="159.0" layoutY="265.0" />
+            <Label fx:id="nmpd" layoutX="85.0" layoutY="265.0" prefHeight="17.0" prefWidth="181.0" text="Login ou mot de passe incorrect" textFill="RED" />
+         </children>
+      </AnchorPane>
+      
+      <Text layoutX="46.0" layoutY="355.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat de la base de données: " />
+      <Text fx:id="etatbase" layoutX="175.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <JFXButton fx:id="nouvutil" buttonType="RAISED" layoutX="26.0" layoutY="404.0" onAction="#btn_nouvutil" prefHeight="30.0" prefWidth="188.0" style="-fx-background-color: #007ff6;" stylesheets="@cssbtn.css" text="Nouveau Utilisateur" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" wrappingWidth="33.0" />
+         </graphic>
+      </JFXButton>
+      <Hyperlink fx:id="bddparam" layoutX="14.0" layoutY="362.0" onAction="#bddparam_act" opacity="0.5" text="Paramètres de la base de données">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#437180" glyphName="WRENCH" />
+         </graphic>
+      </Hyperlink>
+      <Label fx:id="lbletatsql" layoutX="194.0" layoutY="342.0" text="Non connecté" textFill="RED" />
+      <ImageView fitHeight="84.0" fitWidth="265.0" layoutX="43.0" layoutY="110.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logoCNFP.png" />
+         </image>
+      </ImageView>
+      <FontAwesomeIconView glyphName="DATABASE" layoutX="26.0" layoutY="355.0" opacity="0.5" />
+   </children>
+</AnchorPane>

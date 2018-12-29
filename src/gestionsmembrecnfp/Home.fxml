@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionsmembrecnfp.HomeController">
+   <children>
+      <StackPane layoutY="-9.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="ancprincipal" prefHeight="600.0" prefWidth="900.0">
+               <left>
+                  <AnchorPane fx:id="acDashBord" style="-fx-background-color: #2A3F54;">
+                     <children>
+                        <ScrollPane fx:id="leftSideBarScroolPan" fitToHeight="true" fitToWidth="true" prefHeight="609.0" prefViewportHeight="678.0" prefViewportWidth="171.0" prefWidth="206.0" style="-fx-background-color: #2A3F54;" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane style="-fx-background-color: #2A3F54;">
+                                 <children>
+                                    <VBox fx:id="vbox" prefHeight="600.0" prefWidth="201.0" style="-fx-background-color: gray;">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="197.0" style="-fx-background-color: #bf3f3f;" text="Navigation" textAlignment="CENTER" textFill="#fffdfd">
+                                             <font>
+                                                <Font name="Comic Sans MS" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="btnaccueil" contentDisplay="TOP" onAction="#btnaccueil_act" prefHeight="111.0" prefWidth="201.0" styleClass="nav-button" stylesheets="@cssbtn.css" text="Accueil" textFill="#b9adad">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="50.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnmembres" contentDisplay="TOP" onAction="#btnmembres_act" styleClass="nav-button" stylesheets="@cssbtn.css" text="Membres">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="50.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnaEtatmembr" contentDisplay="TOP" onAction="#btnEtatmembr_act" styleClass="nav-button" stylesheets="@cssbtn.css" text="Imporation,exportation,impression">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="INDENT" size="50.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnutilisateur" contentDisplay="TOP" onAction="#btnutilisateur_act" styleClass="nav-button" stylesheets="@cssbtn.css" text="Utilisateurs">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="USER" size="50.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnlougout" contentDisplay="TOP" onAction="#btnlougout_act" prefHeight="147.0" styleClass="nav-button" stylesheets="@cssbtn.css" text="Deconnecter">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" size="50.0" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <BorderPane fx:id="appcontent" prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <AnchorPane fx:id="head" prefHeight="42.0" style="-fx-background-color: #2A3F54;" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane prefHeight="42.0" prefWidth="719.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXHamburger fx:id="hamburger" onMouseClicked="#hamburger_act" prefHeight="42.0" prefWidth="68.0" style="-fx-cursor: hand;">
+                                             <effect>
+                                                <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+                                             </effect></JFXHamburger>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                       <children>
+                                          <ImageView fitHeight="43.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Images/logoCNFP.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <StackPane fx:id="acContent" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

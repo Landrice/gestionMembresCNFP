@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.UtilisateurController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="tablview" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="codeutil_col" prefWidth="75.0" text="Code Utilisateur" />
+                  <TableColumn fx:id="nomutil_col" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="prenomutil_col" prefWidth="75.0" text="Prenom" />
+                  <TableColumn fx:id="identifiutil_col" prefWidth="75.0" text="Identifiant" />
+                  <TableColumn fx:id="typeutil_col" prefWidth="75.0" text="Type" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="actubtn" buttonType="RAISED" contentDisplay="TOP" onAction="#actubtn_act" styleClass="btn" stylesheets="@../gestionsmembrecnfp/cssbtn.css" text="Actualiser">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ROTATE_LEFT" size="20.0" />
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="nouvutil" buttonType="RAISED" contentDisplay="TOP" onAction="#nouvutil_act" styleClass="btn" stylesheets="@../gestionsmembrecnfp/cssbtn.css" text="Nouveau">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20.0" />
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="supprutil" buttonType="RAISED" contentDisplay="TOP" onAction="#supprutil_act" styleClass="btn" stylesheets="@../gestionsmembrecnfp/cssbtn.css" text="Supprimer">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" size="20.0" />
+                     </graphic></JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>
